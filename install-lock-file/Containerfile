@@ -1,0 +1,4 @@
+FROM ubi9/ubi:9.2-755.1697625012
+COPY lock-file.txt /tmp/lock-file.txt
+RUN dnf install -y git $(cat /tmp/lock-file.txt)
+
